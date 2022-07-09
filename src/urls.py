@@ -17,11 +17,14 @@ Including another URLconf
 from django.urls import path
 from rest_framework import routers
 
-from .api import PessoaViews, views
+from .api import PessoaViews, views  
 
 router = routers.DefaultRouter()
 
 urlpatterns = [
     path('hello/', views.health),
-    path('funcionario/', views.Funcionarios)
+    path('funcionario/', views.Funcionarios),
+    path('perfil/', views.perfil_info),
+    path('curriculo/', views.curriculo_info),
+
 ]
